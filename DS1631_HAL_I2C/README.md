@@ -14,4 +14,4 @@ You can configure the address of DS1631 in `ds1631.h`.
 
 ## ⚡ Circuit Diagram
 
-![Setup](circuit_diagram.jpg)
+![Circuit Diagram](https://github.com/Vincentho711/STM32-Embedded-Development/blob/master/DS1631_HAL_I2C/circuit_diagram.JPG?raw=true)
