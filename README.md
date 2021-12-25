@@ -6,7 +6,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <p align="center">
-  <a href="https://github.com/Vincentho711/Interactive-Brokers-Trading-Bot">
+  <a href="https://github.com/Vincentho711/STM32-Embedded-Development">
     <img src="images/STM32_logo.png" alt="Logo" width="180" height="180">
   </a>
 
@@ -48,6 +48,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/Vincentho711/STM32-Embedded-Development?style=for-the-badge
 [issues-url]: https://github.com/Vincentho711/STM32-Embedded-Development/issues
 [license-shield]: https://img.shields.io/github/license/Vincentho711/STM32-Embedded-Development?style=for-the-badge
-[license-url]: https://github.com/Vincentho711/STM32-Embedded-Development/blob/main/LICENSE.txt
+[license-url]: https://github.com/Vincentho711/STM32-Embedded-Development/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/vincent-ho-b0932b138/
