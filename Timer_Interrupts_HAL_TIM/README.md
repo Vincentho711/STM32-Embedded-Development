@@ -12,9 +12,13 @@ Open STM32CubeIDE, under "Pinout & Configuration" of the `.ioc` file, navigate t
 
 The counter period will be our interrupt period (note that the -1 rule applies here as well): 
 
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;\text{Counter&space;Period}&space;=&space;[\text&space;{&space;Desired&space;int.&space;period(s)&space;$\times$&space;(CPU&space;clk&space;speed(MHz)/Prescalar)]&space;-&space;1}" title="\inline \text{Counter Period} = [\text { Desired int. period(s) $\times$ (CPU clk speed(MHz)/Prescalar)] - 1}" />
+
 <img src="https://latex.codecogs.com/gif.latex?\text{Counter Period} = [\text { Desired int. period(s) $\times$ (CPU clk speed(MHz)/Prescalar)] - 1 } " />
 
 E.g. If we want 1s interrupts and we have 84Mhz CPU clock and prescalar = 8400: 
+
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\inline&space;\text{Counter&space;Period}&space;=&space;&space;[1&space;\times&space;(\frac{84\times10^{6}}{8400})]&space;-1&space;=&space;10000&space;-&space;1&space;=&space;9999&space;" title="\inline \text{Counter Period} =  [1 \times (\frac{84\times10^{6}}{8400})] -1 = 10000 - 1 = 9999 " />
 
 <img src="https://latex.codecogs.com/gif.latex?\text{Counter Period} =  [1 \times (\frac{84\times10^{6}}{8400})] -1 = 10000 - 1 = 9999 " />
 
