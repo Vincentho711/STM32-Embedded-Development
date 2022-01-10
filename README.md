@@ -28,6 +28,12 @@
 
 Each project is in a folder. There is a `README.md` in every project to explain what it does and how to set it up.
 
+<!-- Current Projects -->
+## 💻 Current projects
+- [DS1631_HAL_I2C](https://github.com/Vincentho711/STM32-Embedded-Development/tree/master/DS1631_HAL_I2C)
+- [Timer_Interrupts_HAL_TIM](https://github.com/Vincentho711/STM32-Embedded-Development/tree/master/Timer_Interrupts_HAL_TIM)
+- [CAN_Bus_HAL_MCP2551](https://github.com/Vincentho711/STM32-Embedded-Development/tree/master/CAN_Bus_HAL_MCP2551)
+
 <!-- LICENSE -->
 ## 📜 License
 
