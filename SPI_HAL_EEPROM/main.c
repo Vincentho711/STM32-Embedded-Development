@@ -112,7 +112,7 @@ int main(void)
   uart_buf_len = sprintf(uart_buf, "SPI Test\r\n");
   HAL_UART_Transmit(&huart2, (uint8_t *)uart_buf, uart_buf_len, 100);
 
-  // Set up data in the spi_buf to be written to eeprom
+  // Set up data in the spi_buf to be written to EEPROM
   // Test bytes to write to EEPROM
   spi_buf[0] = 0xCC;
   spi_buf[1] = 0xDD;
@@ -131,63 +131,8 @@ int main(void)
 	  uart_buf_len = sprintf(uart_buf, "Write failed.\r\n");
 	  HAL_UART_Transmit(&huart2, (uint8_t *)uart_buf, uart_buf_len, 100);
   }
-  /*
 
-
-    // Write 3 bytes starting at given address
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-    HAL_SPI_Transmit(&hspi1, (uint8_t *)&EEPROM_WRITE, 1, 100);
-    HAL_SPI_Transmit(&hspi1, (uint8_t *)&addr, 1, 100);
-    HAL_SPI_Transmit(&hspi1, (uint8_t *)spi_buf, 3, 100);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-
-    // Clear buffer
-    spi_buf[0] = 0;
-    spi_buf[1] = 0;
-    spi_buf[2] = 0;
-
-    // Wait until WIP bit is cleared
-    uint8_t wip = 1;
-    while (wip)
-    {
-      // Read status register
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-      HAL_SPI_Transmit(&hspi1, (uint8_t *)&EEPROM_RDSR, 1, 100);
-      HAL_SPI_Receive(&hspi1, (uint8_t *)spi_buf, 1, 100);
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-
-      // Mask out WIP bit
-      wip = spi_buf[0] & 0b00000001;
-    }
-
-  if (ret != HAL_OK)
-  {
-	  // Print error message to serial terminal to make sure SPI is working
-	  uart_buf_len = sprintf(uart_buf, "Write Failed \r\n");
-	  HAL_UART_Transmit(&huart2, (uint8_t *)uart_buf, uart_buf_len, 100);
-  }
-
-  // Print the content of the status register of EEPROM over serial
-  uart_buf_len = sprintf(uart_buf, "Status: 0x%02x\r\n",(unsigned int)spi_buf[0]);
-  HAL_UART_Transmit(&huart2, (uint8_t *)uart_buf, uart_buf_len,100);
-
-
-    // Read the 3 bytes back
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-      HAL_SPI_Transmit(&hspi1, (uint8_t *)&EEPROM_READ, 1, 100);
-      HAL_SPI_Transmit(&hspi1, (uint8_t *)&addr, 1, 100);
-      HAL_SPI_Receive(&hspi1, (uint8_t *)spi_buf, 3, 100);
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-
-      // Print out bytes read
-      uart_buf_len = sprintf(uart_buf,
-                              "0x%02x 0x%02x 0x%02x\r\n",
-                              (unsigned int)spi_buf[0],
-                              (unsigned int)spi_buf[1],
-                              (unsigned int)spi_buf[2]);
-      HAL_UART_Transmit(&huart2, (uint8_t *)uart_buf, uart_buf_len, 100);
-  */
-  //ret = eeprom_read(GPIOB, GPIO_PIN_6, addr, spi_buf,3, &hspi1);
+  // Read from EEPROM
   ret = eeprom_read(GPIOB, GPIO_PIN_6, addr, spi_buf, spi_buf_size, &hspi1);
   // if the data from the EEPROM has been read successfully, print out the bytes read on serial
   if (ret == HAL_OK)
